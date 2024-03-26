@@ -42,6 +42,7 @@ let btn1 = document.querySelector("#btn1");
 // };
 
 
+let body = document.querySelector("body");
 let mode = true;
 btn1.addEventListener("click", () =>{
     console.log("you are tyring to change mode");
@@ -49,10 +50,14 @@ btn1.addEventListener("click", () =>{
     console.log(mode);
     if (mode) {
         mode = false;
-        document.querySelector("body").style.backgroundColor = "grey";
+        // document.querySelector("body").style.backgroundColor = "grey";
+        body.classList.add("grey");
+        body.classList.remove("light");
     }
     else{
         mode = true;
-        document.querySelector("body").style.backgroundColor = "white";
+        // document.querySelector("body").style.backgroundColor = "white";
+        body.classList.add("light");
+        body.classList.remove("dark");
     }
 })
